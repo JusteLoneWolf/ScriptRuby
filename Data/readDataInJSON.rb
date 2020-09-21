@@ -1,7 +1,6 @@
 
 require 'json'
-
-file = File.open 'data.json'
-data = JSON.load file
-
-puts data["name"] #return Michel
+File.open("data.json","r") do |f|
+  data = JSON.load f
+  puts data
+end
